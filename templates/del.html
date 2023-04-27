@@ -1,0 +1,9 @@
+{% extends "book_page.html" %}
+
+{% block fav %}
+<div class="favourite">
+    <form action="/book/{{book_name}}/del" , method="post">
+        <button name="favBtn" onclick="del_fav()">Удалить из избранных</button>
+    </form>
+</div>
+{% endblock %}

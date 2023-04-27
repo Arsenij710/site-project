@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="prod">Категории</h1>
+<div class="cat">
+    <a href="/роман">·роман</a>
+    <br>
+    <a href="/приключения">·приключения</a>
+    <br>
+    <a href="/детектив">·детектив</a>
+    <br>
+    <a href="/фантастика">·фантастика</a>
+    <br>
+    <a href="/боевик">·боевик</a>
+    <br>
+    <a href="/реализм">·реализм</a>
+    <br>
+    <a href="/хоррор">·хоррор</a>
+    <br>
+    <a href="/">·все</a>
+
+</div>
+<br>
+<h2 class="prod">Товары</h2>
+<table>
+
+    <tr class="productName">
+        {% for data in itemData[:5] %}
+        <td>
+            {{data.name}}
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productImage">
+        {% for data in itemData[:5] %}
+        <td>
+            {% set book_name = data.name %}
+            <a href="book/{{book_name}}">
+                <img src="{{url_for('static', filename=('images/' + data.image))}}">
+            </a>
+
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productPrice">
+        {% for data in itemData[:5] %}
+        <td>
+            {{data.id}}
+        </td>
+        {%endfor%}
+    </tr>
+
+    <tr class="productName">
+        {% for data in itemData[5:10] %}
+        <td>
+            {{data.name}}
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productImage">
+        {% for data in itemData[5:10] %}
+        <td>
+            {% set book_name = data.name %}
+            <a href="book/{{book_name}}">
+                <img src="{{url_for('static', filename=('images/' + data.image))}}">
+            </a>
+
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productPrice">
+        {% for data in itemData[5:10] %}
+        <td>
+            {{data.id}}
+        </td>
+        {%endfor%}
+    </tr>
+
+    <tr class="productName">
+        {% for data in itemData[10:15] %}
+        <td>
+            {{data.name}}
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productImage">
+        {% for data in itemData[10:15] %}
+        <td>
+            {% set book_name = data.name %}
+            <a href="book/{{book_name}}">
+                <img src="{{url_for('static', filename=('images/' + data.image))}}">
+            </a>
+
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productPrice">
+        {% for data in itemData[10:15] %}
+        <td>
+            {{data.id}}
+        </td>
+        {%endfor%}
+    </tr>
+
+
+    <tr class="productName">
+        {% for data in itemData[15:20] %}
+        <td>
+            {{data.name}}
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productImage">
+        {% for data in itemData[15:20] %}
+        <td>
+            {% set book_name = data.name %}
+            <a href="book/{{book_name}}">
+                <img src="{{url_for('static', filename=('images/' + data.image))}}">
+            </a>
+
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productPrice">
+        {% for data in itemData[15:20] %}
+        <td>
+            {{data.id}}
+        </td>
+        {%endfor%}
+    </tr>
+
+    <tr class="productName">
+        {% for data in itemData[20:25] %}
+        <td>
+            {{data.name}}
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productImage">
+        {% for data in itemData[20:25] %}
+        <td>
+            {% set book_name = data.name %}
+            <a href="book/{{book_name}}">
+                <img src="{{url_for('static', filename=('images/' + data.image))}}">
+            </a>
+
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productPrice">
+        {% for data in itemData[20:25] %}
+        <td>
+            {{data.id}}
+        </td>
+        {%endfor%}
+    </tr>
+
+    <tr class="productName">
+        {% for data in itemData[25:30] %}
+        <td>
+            {{data.name}}
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productImage">
+        {% for data in itemData[25:30] %}
+        <td>
+            {% set book_name = data.name %}
+            <a href="book/{{book_name}}">
+                <img src="{{url_for('static', filename=('images/' + data.image))}}">
+            </a>
+
+        </td>
+        {%endfor%}
+    </tr>
+    <tr class="productPrice">
+        {% for data in itemData[25:30] %}
+        <td>
+            {{data.id}}
+        </td>
+        {%endfor%}
+    </tr>
+</table>
+{% endblock %}

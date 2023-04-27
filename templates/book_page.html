@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="display_page">
+        <div class="image">
+            <img src="{{url_for('static', filename=('images/' + book_image))}}">
+        </div>
+        <div class="description">
+            <h1 class="title">{{book_name}}</h1>
+            <p>{{author}}</p>
+            <article>{{description}}</article>
+        </div>
+        {% block fav %}{% endblock %}
+    </div>
+
+
+{% endblock %}

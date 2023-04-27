@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+        <div>
+            {% for fb in fav_books %}
+            <a href="book/{{fb.name}}">
+            <img src="{{url_for('static', filename=('images/' + fb.image))}}">
+            </a>
+            <div>{{fb.name}}</div>
+            <div>{{fb.author}}</div>
+            <div>{{fb.description}}</div>
+            <br>
+            <br>
+            {% endfor %}
+        </div>
+
+
+
+
+
+{% endblock %}
